@@ -38,9 +38,9 @@ apache::module { 'vhost_alias': }
 apache::vhost { 'festylove.dev':
   server_name   => 'festylove.dev',
   serveraliases => [
-    'www.bertha.dev'
+    'www.festylove.dev'
   ],
-  docroot       => '/var/www/',
+  docroot       => '/var/www/public',
   port          => '80',
   env_variables => [
 ],

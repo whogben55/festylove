@@ -1,0 +1,46 @@
+.hero-spacer {
+    margin-top: 50px;
+}
+
+.hero-feature {
+    margin-bottom: 30px;/* spaces out the feature boxes once they start to stack responsively */
+}
+
+.header {
+    margin-top: 50px;
+    bottom: 50px;
+    text-align: center;
+}
+
+.col-lg-4 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.imgDescription {
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color:dimgray;
+
+    visibility: hidden;
+    opacity: 0;
+
+    -webkit-transition: visibility opacity 0.2s;
+}
+
+.darken img{
+    background: black;
+    padding: 0;
+}
+
+.darken:hover img{
+    opacity: 0.2;
+}
+
+.darken:hover .imgDescription{
+    visibility: visible;
+    opacity: 1;
+}

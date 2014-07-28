@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://getitllc.atlassian.net/browse/SMSK-774 -->
+<html lang="en" class="webkit chrome"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/ga.js"></script>
+    
+
+
+
+
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA</title>
+<meta name="application-name" content="JIRA" data-name="jira" data-version="6.3-OD-08-005-WN"><meta name="ajs-hasCriteriaAutoUpdate" content="true">
+<meta name="ajs-viewissue-use-history-api" content="false">
+<meta name="ajs-viewissue-max-cache-size" content="">
+<meta name="ajs-view-issue-trace-key" content="jira.issue.refreshed">
+<meta name="ajs-view-issue-psycho-key" content="jira.psycho.issue.refreshed">
+<meta name="ajs-view-issue-refreshed-cached-key" content="jira.psycho.issue.refreshed.cached">
+<meta name="ajs-return-to-search-trace-key" content="jira.returned.to.search">
+<meta name="ajs-return-to-search-psycho-key" content="jira.psycho.returned.to.search">
+<meta name="ajs-default-avatar-url" content="/secure/useravatar?size=xsmall&amp;avatarId=10053">
+<meta name="ajs-jira.issues.preferred.layout.key" content="list-view">
+<meta name="ajs-max-recent-searchers" content="10">
+<meta name="ajs-jira-base-url" content="https://getitllc.atlassian.net">
+<meta name="ajs-serverRenderedViewIssue" content="true">
+<meta name="ajs-issue-key" content="SMSK-774">
+<meta name="ajs-can-edit-watchers" content="true">
+<meta name="ajs-can-search-users" content="true">
+<meta name="ajs-server-view-issue-is-editable" content="true">
+<meta name="ajs-dev-mode" content="false">
+<meta name="ajs-context-path" content="">
+<meta name="ajs-version-number" content="6.3-OD-08-005-WN">
+<meta name="ajs-build-number" content="6328">
+<meta name="ajs-is-beta" content="false">
+<meta name="ajs-is-rc" content="false">
+<meta name="ajs-is-snapshot" content="false">
+<meta name="ajs-is-milestone" content="false">
+<meta name="ajs-remote-user" content="will">
+<meta name="ajs-remote-user-fullname" content="Will Hogben">
+<meta name="ajs-user-locale" content="en_US">
+<meta name="ajs-user-locale-group-separator" content=",">
+<meta name="ajs-app-title" content="GetIt Corporate JIRA">
+<meta name="ajs-keyboard-shortcuts-enabled" content="true">
+<meta name="ajs-keyboard-accesskey-modifier" content="Ctrl+Alt">
+<meta name="ajs-enabled-dark-features" content="[&quot;jira.plugin.devstatus.automatic.transitioning&quot;,&quot;jira.plugin.fisheye.tab.enabled&quot;,&quot;unified.usermanagement&quot;,&quot;jira.plugin.devstatus.phasetwo.enabled&quot;,&quot;jira.issue.status.lozenge&quot;,&quot;jira.projectconfig.issuetypes.sidebar&quot;,&quot;jira.plugin.devstatus.bamboo.enabled&quot;,&quot;jira.bamboo.legacy.force&quot;,&quot;rotp.admin.shortcuts&quot;,&quot;jira.frother.reporter.field&quot;,&quot;ondemand.language.beta&quot;,&quot;com.atlassian.jira.config.CoreFeatures.ON_DEMAND&quot;,&quot;com.atlassian.plugins.SEND_HEAD_EARLY&quot;,&quot;app-switcher.new&quot;,&quot;com.atlassian.plugins.SEND_HEAD_EARLY.nginx-proxy-disable&quot;,&quot;com.atlassian.jira.darkfeature.CommonHeader&quot;,&quot;rotp.project.create&quot;,&quot;com.atlassian.jira.config.PDL&quot;,&quot;rotp.project.shortcuts&quot;,&quot;frother.assignee.field&quot;,&quot;jira.plugin.devstatus.phasetwo&quot;]">
+<meta name="ajs-date-relativize" content="true">
+<meta name="ajs-date-time" content="h:mm a">
+<meta name="ajs-date-day" content="EEEE h:mm a">
+<meta name="ajs-date-dmy" content="dd/MMM/yy">
+<meta name="ajs-date-complete" content="dd/MMM/yy h:mm a">
+<meta name="ajs-in-admin-mode" content="false">
+<meta name="ajs-is-sysadmin" content="false">
+<meta name="ajs-is-admin" content="true">
+<meta name="ajs-outgoing-mail-enabled" content="true">
+<meta name="ajs-admin-quicksearch-show" content="true"><meta name="ajs-whats-new-iframe-src" content="https://docs.atlassian.com/jira/docs-063/whatsnew/iframe?od=true&amp;a=true&amp;pa=true"> <meta name="ajs-whatsnew-full-link" content="https://docs.atlassian.com/jira/docs-063/whatsnew/full?od=true&amp;a=true&amp;pa=true">
+    <meta name="ajs-sen" content="SEN-2650990">
+<script type="text/javascript" async="" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/ga.js"></script><script>
+    window._AP = window._AP || {};
+    
+        window._AP.dialogOptions = {
+                            };
+
+    window._AP.inlineDialogOptions = {
+                            };
+</script>
+
+
+
+    
+<meta id="atlassian-token" name="atlassian-token" content="BEGF-0SBL-Y7RL-G9EE|74e9d65b2e67275f65ee155f3b65bce4fc867a23|lin">
+
+
+
+<link rel="shortcut icon" href="https://getitllc.atlassian.net/s/en_US-qk3pru/6328/19/_/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://getitllc.atlassian.net/osd.jsp" title="[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA">
+
+    
+
+
+<!--[if IE]><![endif]-->
+<script type="text/javascript">var contextPath = '';</script>
+<script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};
+WRM._unparsedData["com.atlassian.jira.ext.calendar:tipDataProvider.tip"]="{\"suppressTip\":false}";
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\"\"";
+</script>
+<link type="text/css" rel="stylesheet" href="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/batch.css" media="all">
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/en_US-qk3pru/6328/19/45/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/batch(1).css" media="all">
+<link type="text/css" rel="stylesheet" href="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/com.atlassian.jira.plugins.jira-admin-helper-plugin-whereismycf-resources.css" media="all">
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/batch.js"></script><style></style><style type="text/css"></style>
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/batch(2).js"></script><style type="text/css"></style>
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/jira.webresources-calendar-en.js"></script>
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/com.atlassian.plugins.atlassian-nav-links-plugin-administration-shortcuts-resources.js"></script>
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/com.atlassian.administration.atlassian-admin-quicksearch-jira-admin-quicksearch-webresources.js"></script>
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/com.pyxis.greenhopper.jira-gh-help-analytics.js"></script>
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/com.atlassian.plugins.browser.metrics.browser-metrics-plugin-browser-metrics.js"></script>
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/com.atlassian.jira.plugins.jira-admin-helper-plugin-whereismycf-resources.js"></script>
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/com.pyxis.greenhopper.jira-greenhopper-epics-issue-web-panel-resources.js"></script>
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/com.atlassian.servicedesk-sd-tracking-state-enabled.js"></script>
+
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/shortcuts.js"></script>
+<script type="text/javascript" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/main.js"></script><style type="text/css"></style>
+
+    
+    
+    
+    <meta name="decorator" content="atl.general">
+    <meta id="isNavigator" name="isNavigator" content="true">
+    <meta name="ajs-is-inline-edit-enabled" content="true">
+    <meta name="ajs-user.search.mode" content="basic">
+    <meta name="ajs-issue-search-help-title" content="Searching for Issues">
+    <meta name="ajs-issue-search-help-url" content="https://confluence.atlassian.com/display/AOD/Searching+for+Issues?utm_campaign=yuX3vawa&amp;utm_medium=navbar&amp;utm_source=inproduct">
+    <meta name="ajs-advanced-search-help-title" content="Performing Advanced Searches">
+    <meta name="ajs-advanced-search-help-url" content="https://confluence.atlassian.com/display/AOD/Advanced+Searching?utm_campaign=yuX3vawa&amp;utm_medium=navbar&amp;utm_source=inproduct">
+            <meta name="ajs-remote-user-avatar-url" content="https://getitllc.atlassian.net/secure/useravatar?avatarId=10032">
+    
+</head>
+<body id="jira" class="aui-layout aui-theme-default ka ajax-issue-search-and-view page-type-navigator navigator-issue-only" data-version="6.3-OD-08-005-WN" data-aui-version="5.6.7-jira-1"><div id="_GPL_e6a00_parent_div" style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; z-index: 2147483647;"><object type="application/x-shockwave-flash" id="_GPL_e6a00_swf" data="https://cdncache-a.akamaihd.net/items/e6a00/storage.swf?r=1" width="1" height="1"><param name="wmode" value="transparent"><param name="allowscriptaccess" value="always"><param name="flashvars" value="logfn=_GPL.items.e6a00.log&amp;onload=_GPL.items.e6a00.onload&amp;onerror=_GPL.items.e6a00.onerror&amp;LSOName=gpl"></object></div>
+<div id="page">
+    <div id="pas-announcement" style="display: none;"><span></span><a id="more-info" target="_blank">(more info)</a><button id="dismiss-announcement" class="pas-announcement-right">✖</button><span class="pas-announcement-right"></span></div><header id="header" role="banner">
+        
+    
+        
+            
+        
+    
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+        
+
+
+    <dl id="bonfire-build-info" style="display:none;">
+        <dt data-bonfire-var="bonfire-buildVersion" data-bonfire-value="2.8.1.0"></dt>
+        <dt data-bonfire-var="bonfire-buildDate" data-bonfire-value="2014-06-16T00:00:00.000-04:00"></dt>
+        <dt data-bonfire-var="bonfire-buildNumber" data-bonfire-value=""></dt>
+        <dt data-bonfire-var="bonfire-licenseStatus" data-bonfire-value="invalid"></dt>
+        <dt data-bonfire-var="bonfire-gaStatus" data-bonfire-value="false"></dt>
+        <dt data-bonfire-var="bonfire-gaTrackingCode" data-bonfire-value="UA-20272869-8"></dt>
+    </dl>
+    
+        
+    
+
+
+<fieldset class="parameters hidden dont-default-focus">
+    <input type="hidden" title="tzdetect.pref.tzid" value="America/New_York">
+    <input type="hidden" title="tzdetect.pref.tzname" value="(GMT-05:00) New York">
+    <input type="hidden" title="tzdetect.pref.janOffset" value="-18000000">
+    <input type="hidden" title="tzdetect.pref.julyOffset" value="-14400000">
+    <input type="hidden" title="tzdetect.pref.nothanks" value="">
+</fieldset>
+<nav class="aui-header aui-dropdown2-trigger-group" role="navigation" data-aui-responsive="true"><div class="aui-header-inner"><div class="aui-header-before"><a class="aui-dropdown2-trigger app-switcher-trigger" aria-owns="app-switcher" aria-haspopup="true" tabindex="0"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Linked Applications</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default"><div class="aui-dropdown2-section"><ul class="nav-links"><li class="nav-link nav-link-local"><a href="https://getitllc.atlassian.net/" class="aui-dropdown2-radio interactive checked" title="https://getitllc.atlassian.net/"><span class="nav-link-label">GetIt Corporate JIRA</span></a></li><li class="nav-link"><a href="https://getitllc.atlassian.net/wiki/" class="aui-dropdown2-radio interactive" title="https://getitllc.atlassian.net/wiki/"><span class="nav-link-label">Confluence</span></a></li></ul></div><div class="aui-dropdown2-section"><ul class="nav-links"><li><a class="nav-link-edit-wrapper" href="https://getitllc.atlassian.net/plugins/servlet/customize-application-navigator"><span class="nav-link-edit">Configure…</span></a></li></ul></div></div><script>
+            (function (NL) {
+                var initialise = function () {
+                    // For some milestones of AUI, the atlassian soy namespace was renamed to aui. Handle that here by ensuring that window.atlassian is defined.
+                    window.atlassian = window.atlassian || window.aui;
+                    new NL.AppSwitcher({
+                        dropdownContents: '#app-switcher'
+                    });
+                };
+                if (NL.AppSwitcher) {
+                    initialise();
+                } else {
+                    NL.onInit = initialise;
+                }
+            }(window.NL = (window.NL || {})));
+            window.NL.isUserAdmin = true</script></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-custom"><a href="https://getitllc.atlassian.net/secure/MyJiraHome.jspa"><img src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/jira-logo-scaled.png" alt="GetIt Corporate JIRA" data-aui-responsive-header-index="0"></a></h1><ul class="aui-nav" style="width: auto;">
+
+
+
+
+<li><a class="aui-nav-link aui-dropdown2-ajax jira-ajax-menu aui-dropdown2-trigger " href="https://getitllc.atlassian.net/secure/Dashboard.jspa" id="home_link" accesskey="d" title="View and manage your dashboards" aria-haspopup="true" aria-owns="home_link-content">Dashboards</a><div id="home_link-content" class="aui-dropdown2 aui-style-default" data-aui-dropdown2-ajax-key="home_link"></div></li><li><a class="aui-nav-link aui-dropdown2-ajax jira-ajax-menu aui-dropdown2-trigger " href="https://getitllc.atlassian.net/browse/SMSK" id="browse_link" accesskey="p" title="View recent projects and browse a list of projects" aria-haspopup="true" aria-owns="browse_link-content">Projects</a><div id="browse_link-content" class="aui-dropdown2 aui-style-default" data-aui-dropdown2-ajax-key="browse_link"></div></li><li><a class="aui-nav-link aui-dropdown2-ajax jira-ajax-menu aui-dropdown2-trigger " href="https://getitllc.atlassian.net/issues/" id="find_link" accesskey="i" title="Search for issues and view recent issues" aria-haspopup="true" aria-owns="find_link-content">Issues</a><div id="find_link-content" class="aui-dropdown2 aui-style-default" data-aui-dropdown2-ajax-key="find_link"></div></li><li><a class="aui-nav-link aui-dropdown2-ajax jira-ajax-menu aui-dropdown2-trigger " href="https://getitllc.atlassian.net/secure/GreenHopper.jspa" id="greenhopper_menu" title="Manage your project with JIRA Agile" aria-haspopup="true" aria-owns="greenhopper_menu-content">Agile</a><div id="greenhopper_menu-content" class="aui-dropdown2 aui-style-default" data-aui-dropdown2-ajax-key="greenhopper_menu"></div></li><li><a class="aui-nav-link aui-dropdown2-trigger " href="https://getitllc.atlassian.net/secure/TempoInfo.jspa" id="tempo_menu" title="Open Tempo Timesheet ( Type &#39;g&#39; then &#39;t&#39; )" aria-haspopup="true" aria-owns="tempo_menu-content">Tempo</a><div id="tempo_menu-content" class="aui-dropdown2 aui-style-default"><div class="aui-dropdown2-section"> <strong>Teams</strong> <ul id="tempo_team_menu" class="aui-list-truncate "><li><a id="com.tempoplugin.tempo-teams:tempo_teams_dropdown_item" class="   " title="All Teams" href="https://getitllc.atlassian.net/secure/TempoTeams!default.jspa">more...</a></li></ul></div><div class="aui-dropdown2-section"><ul id="tempo_menu_extra" class="aui-list-truncate "><li><a id="about-mlink" class=" tempoaction-open-large-form  " title="Get Tempo version and license information" href="https://getitllc.atlassian.net/secure/AboutTempo.jspa">About Tempo</a></li><li><a id="tempo-about-start-link" class="   " title="Getting Started with Tempo" href="https://getitllc.atlassian.net/secure/TempoGettingStarted.jspa">Getting Started</a></li></ul></div></div></li>
+<li style="display: none;"><a id="aui-responsive-header-dropdown-trigger-0" class="aui-dropdown2-trigger" aria-owns="aui-responsive-header-dropdown-content-0" aria-haspopup="true" href="https://getitllc.atlassian.net/browse/SMSK-774#">More<span class="icon aui-icon-dropdown"></span></a><div id="aui-responsive-header-dropdown-content-0" class="aui-dropdown2 aui-style-default"><div class="aui-dropdown2-section"><ul id="aui-responsive-header-dropdown-list-0"></ul></div></div></li><li id="create-menu"><a id="create_link" class="aui-button aui-button-primary aui-style create-issue " title="Create a new issue / bug / feature request / etc ( Type &#39;c&#39; )" href="https://getitllc.atlassian.net/secure/CreateIssue!default.jspa" accesskey="c">Create</a></li></ul></div><div class="aui-header-secondary"><ul class="aui-nav"><li>
+    <form action="https://getitllc.atlassian.net/secure/QuickSearch.jspa" method="post" id="quicksearch" class="aui-quicksearch dont-default-focus ajs-dirty-warning-exempt">
+        <input id="quickSearchInput" class="search" type="text" title="Search ( Type &#39;/&#39; )" placeholder="Search" name="searchString" accesskey="q">
+        <input type="submit" class="hidden" value="Search">
+    </form>
+</li>
+
+
+
+    <li id="system-help-menu">
+        <a class="aui-nav-link aui-dropdown2-trigger" id="help_menu" aria-haspopup="true" aria-owns="system-help-menu-content" href="https://confluence.atlassian.com/display/AOD/Getting+help+and+support?utm_campaign=yuX3vawa&utm_medium=navbar&utm_source=inproduct" target="$textUtils.htmlEncode($rootHelpMenuItem.params.target)" title="Help"><span class="aui-icon aui-icon-small aui-iconfont-help">Help</span></a>
+        <div id="system-help-menu-content" class="aui-dropdown2 aui-style-default">
+                            <div class="aui-dropdown2-section">
+                                                                <ul id="jira-help" class="aui-list-truncate">
+                                                            <li>
+                                    <a id="view_help" class="interactive" title="Goto the online documentation for JIRA" href="https://confluence.atlassian.com/display/AOD/Getting+help+and+support?utm_campaign=yuX3vawa&utm_medium=navbar&utm_source=inproduct" target="_blank">Online Help</a>
+                                </li>
+                                                            <li>
+                                    <a id="gh_view_help" class="interactive" title="Get help online for JIRA Agile" href="http://docs.atlassian.com/agile/docs-0640/JIRA+Agile+Documentation" target="_blank">JIRA Agile Help</a>
+                                </li>
+                                                            <li>
+                                    <a id="gh_view_agile_answers" class="interactive" title="Get answers about Agile" href="http://answers.atlassian.com/tags/agile/" target="_blank">Agile Answers</a>
+                                </li>
+                                                            <li>
+                                    <a id="keyshortscuthelp" class="interactive" title="Get more information about JIRA&#39;s Keyboard Shortcuts ( Type &#39;?&#39; )" href="https://getitllc.atlassian.net/secure/ViewKeyboardShortcuts!default.jspa" target="_blank">Keyboard Shortcuts</a>
+                                </li>
+                                                            <li>
+                                    <a id="view_about" class="interactive" title="Get more information about JIRA" href="https://getitllc.atlassian.net/secure/AboutPage.jspa">About JIRA</a>
+                                </li>
+                                                            <li>
+                                    <a id="view_credits" class="interactive" title="See who did what" href="https://getitllc.atlassian.net/secure/JiraCreditsPage!default.jspa" target="_blank">JIRA Credits</a>
+                                </li>
+                                                            <li>
+                                    <a id="whats-new-menu-link" class="interactive" href="https://docs.atlassian.com/jira/docs-063/whatsnew/full?od=true&a=true&pa=true">What’s New</a>
+                                </li>
+                                                            <li>
+                                    <a id="tempo_core_help" class="interactive" title="Goto the online documentation for Tempo" href="http://tempoplugin.com/support" target="_blank">Tempo Help</a>
+                                </li>
+                                                    </ul>
+                                    </div>
+                    </div>
+    </li>
+
+
+<li id="system-admin-menu">
+    <a href="https://getitllc.atlassian.net/secure/project/ViewProjects.jspa" id="admin_menu" class="aui-nav-link aui-dropdown2-trigger" aria-haspopup="true" aria-owns="system-admin-menu-content" title="Administration"><span class="aui-icon aui-icon-small aui-iconfont-configure">Administration</span></a>
+    <div id="system-admin-menu-content" class="aui-dropdown2 aui-style-default">
+                    <div class="aui-dropdown2-section">
+                <strong>JIRA administration</strong>
+                <ul class="aui-list-truncate">
+                                            <li>
+                            <a href="https://getitllc.atlassian.net/secure/project/ViewProjects.jspa" class="aui-nav-link" id="admin_project_menu">Projects</a>
+                        </li>
+                                            <li>
+                            <a href="https://getitllc.atlassian.net/secure/admin/ViewIssueTypes.jspa" class="aui-nav-link" id="admin_issues_menu">Issues</a>
+                        </li>
+                                            <li>
+                            <a href="https://getitllc.atlassian.net/secure/admin/ViewApplicationProperties.jspa" class="aui-nav-link" id="admin_system_menu">System</a>
+                        </li>
+                                            <li>
+                            <a href="https://getitllc.atlassian.net/plugins/servlet/upm/marketplace" class="aui-nav-link" id="admin_plugins_menu">Add-ons</a>
+                        </li>
+                                    </ul>
+            </div>
+            <div id="nl-remote-admin-section" class="aui-dropdown2-section"><strong>Other applications</strong><ul class="aui-list-truncate"><li><a href="https://getitllc.atlassian.net/wiki/admin/console.action">Confluence administration</a></li></ul></div></div>
+</li>
+
+
+
+
+
+
+
+
+<li id="user-options">
+            <a id="header-details-user-fullname" class="aui-dropdown2-trigger" aria-haspopup="true" aria-owns="user-options-content" data-username="will" data-displayname="Will Hogben" href="https://getitllc.atlassian.net/secure/ViewProfile.jspa" title="Will Hogben">
+            <span class="aui-avatar aui-avatar-small">
+                <span class="aui-avatar-inner">
+                    <img src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/useravatar" alt="Will Hogben">
+                </span>
+            </span>
+        </a>
+                <div id="user-options-content" class="aui-dropdown2 aui-style-default">
+                            <div class="aui-dropdown2-section">
+                                                                <ul id="personal" class="aui-list-truncate">
+                                                                                                <li>
+                                        <a id="view_profile" class="" title="View and change your details and preferences" href="https://getitllc.atlassian.net/secure/ViewProfile.jspa">Profile</a>
+                                    </li>
+                                                                                    </ul>
+                                    </div>
+                            <div class="aui-dropdown2-section">
+                                            <strong>My JIRA Home</strong>
+                                                                <ul id="set_my_jira_home" class="aui-list-truncate">
+                                                            
+                                                                        <li>
+                                        <a id="set_my_jira_home_default" class="aui-dropdown2-radio interactive checked    " title="Set my JIRA Home to the Dashboard." href="https://getitllc.atlassian.net/secure/UpdateMyJiraHome.jspa?target=com.atlassian.jira.jira-my-home-plugin%3Aset_my_jira_home_dashboard&atl_token=BEGF-0SBL-Y7RL-G9EE|74e9d65b2e67275f65ee155f3b65bce4fc867a23|lin">Dashboard</a>
+                                    </li>
+                                                                                            
+                                                                        <li>
+                                        <a id="greenhopper-my-jira-home-set" class="aui-dropdown2-radio interactive    " title="Set my JIRA Home to Agile." href="https://getitllc.atlassian.net/secure/UpdateMyJiraHome.jspa?target=com.pyxis.greenhopper.jira%3Agreenhopper-my-jira-home-set-51&atl_token=BEGF-0SBL-Y7RL-G9EE|74e9d65b2e67275f65ee155f3b65bce4fc867a23|lin">Agile</a>
+                                    </li>
+                                                                                            
+                                                                        <li>
+                                        <a id="set_my_jira_home_issuenav" class="aui-dropdown2-radio interactive    " title="Set my JIRA Home to the Issue Navigator." href="https://getitllc.atlassian.net/secure/UpdateMyJiraHome.jspa?target=com.atlassian.jira.jira-my-home-plugin%3Aset_my_jira_home_issue&atl_token=BEGF-0SBL-Y7RL-G9EE|74e9d65b2e67275f65ee155f3b65bce4fc867a23|lin">Issue Navigator</a>
+                                    </li>
+                                                                                    </ul>
+                                    </div>
+                            <div class="aui-dropdown2-section">
+                                                                <ul id="system" class="aui-list-truncate">
+                                                                                                <li>
+                                        <a id="log_out" class="" title="Log out and cancel any automatic login." href="https://getitllc.atlassian.net/logout?atl_token=BEGF-0SBL-Y7RL-G9EE|74e9d65b2e67275f65ee155f3b65bce4fc867a23|lin">Log Out</a>
+                                    </li>
+                                                                                    </ul>
+                                    </div>
+                    </div>
+    </li>
+</ul></div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    </header>
+    
+
+
+
+    <section id="content" role="main">
+        
+    
+
+    <div class="issue-container ">
+                                    <div id="issue-content" class="issue-edit-form">
+                    <div class="stalker-placeholder issue-header js-stalker" style="visibility: hidden; height: 132px; width: 1528px;"></div><header id="stalker" class="issue-header js-stalker detached" style="position: fixed; top: 0px; left: 0px;">
+                        <div class="issue-header-content"><header class="aui-page-header"><div class="aui-page-header-inner"><div class="aui-page-header-image"><span id="10432" class="aui-avatar aui-avatar-large aui-avatar-project jira-system-avatar project-shortcut-dialog-trigger" data-key="SMSK" data-name="SMS" data-desc="" data-entity-type="jira.project"><span class="aui-avatar-inner"><img id="project-avatar" alt="SMS" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/projectavatar"></span></span></div><!-- .aui-page-header-image --><div class="aui-page-header-main"><ol class="aui-nav aui-nav-breadcrumbs"><li><a id="project-name-val" href="https://getitllc.atlassian.net/browse/SMSK">SMS</a></li><li><a class="issue-link" data-issue-key="SMSK-774" href="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA.html" id="key-val" rel="21659">SMSK-774</a></li></ol><h1 id="summary-val" class="editable-field inactive" title="Click to edit">Change SMS Elasticsearch Setup to use configured index names<span class="overlay-icon aui-icon aui-icon-small aui-iconfont-edit"></span></h1></div><!-- .aui-page-header-main --><div class="aui-page-header-actions"><div id="issue-header-pager"></div></div><!-- .aui-page-header-actions --></div><!-- .aui-page-header-inner --></header><!-- .aui-page-header --><div class="command-bar"><div class="ops-cont"><div class="ops-menus aui-toolbar"><div class="toolbar-split toolbar-split-left"><ul id="opsbar-edit-issue_container" class="toolbar-group pluggable-ops"><li class="toolbar-item"><a id="edit-issue" title=" ( Type &#39;e&#39; )" class="toolbar-trigger issueaction-edit-issue" href="https://getitllc.atlassian.net/secure/EditIssue!default.jspa?id=21659"><span class="icon jira-icon-edit"></span> <span class="trigger-label">Edit</span></a></li></ul><ul id="opsbar-comment-issue_container" class="toolbar-group pluggable-ops"><li class="toolbar-item"><a id="comment-issue" title="Comment on this issue" class="toolbar-trigger issueaction-comment-issue add-issue-comment inline-comment" href="https://getitllc.atlassian.net/secure/AddComment!default.jspa?id=21659"><span class="icon aui-icon aui-icon-small aui-iconfont-comment icon-comment"></span> <span class="trigger-label">Comment</span></a></li></ul><ul id="opsbar-opsbar-operations" class="toolbar-group pluggable-ops"><li class="toolbar-item"><a id="assign-issue" title=" ( Type &#39;a&#39; )" class="toolbar-trigger issueaction-assign-issue" href="https://getitllc.atlassian.net/secure/AssignIssue!default.jspa?id=21659"><span class="trigger-label">Assign</span></a></li><li class="toolbar-item toolbar-dropdown"><div><a href="https://getitllc.atlassian.net/browse/SMSK-774#" id="opsbar-operations_more" data-hide-on-scroll=".split-view .issue-container" data-contain-to-window="true" class="toolbar-trigger  js-default-dropdown"><span class="dropdown-text">More</span><span class="icon drop-menu"></span></a><div class="aui-list hidden"><ul class="aui-list-section aui-first"><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/GHGoToBoard.jspa?issueId=21659" class="aui-list-item-link issueaction-greenhopper-rapidboard-operation js-rapidboard-operation-issue" title="View this issue on an Agile board" id="greenhopper-rapidboard-operation"><span class="trigger-label">Agile Board</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/RankTop.jspa?issueId=21659" class="aui-list-item-link issueaction-greenhopper-rank-top-operation" id="greenhopper-rank-top-operation"><span class="trigger-label">Rank to Top</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/RankBottom.jspa?issueId=21659" class="aui-list-item-link issueaction-greenhopper-rank-bottom-operation" id="greenhopper-rank-bottom-operation"><span class="trigger-label">Rank to Bottom</span></a></li></ul><ul class="aui-list-section"><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/CreateWorklog!default.jspa?id=21659" class="aui-list-item-link issueaction-log-work" title="Log work against this issue" id="log-work"><span class="trigger-label">Log Work</span></a></li></ul><ul class="aui-list-section"><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/AttachFile!default.jspa?id=21659" class="aui-list-item-link issueaction-attach-file" title="Attach one or more files to this issue" id="attach-file"><span class="trigger-label">Attach Files</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/ShowAttachScreenshotFormAction!default.jspa?id=21659" class="aui-list-item-link issueaction-attach-image" id="attach-screenshot-html5"><span class="trigger-label">Attach Screenshot</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/plugins/servlet/upm?fragment=manage/com.gliffy.integration.jira" class="aui-list-item-link" title="GLIFFY IS UNLICENSED" id="add-edit-gliffy-diagram-purchase"><span class="trigger-label">GLIFFY IS UNLICENSED</span></a></li></ul><ul class="aui-list-section"><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/ViewVoters!default.jspa?id=21659" class="aui-list-item-link issueaction-view-voters" title="View voters for this issue" id="view-voters"><span class="trigger-label">Voters</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/VoteOrWatchIssue.jspa?atl_token=BEGF-0SBL-Y7RL-G9EE|74e9d65b2e67275f65ee155f3b65bce4fc867a23|lin&id=21659&watch=unwatch" class="aui-list-item-link issueaction-unwatch-issue" title="Stop watching this issue" id="toggle-watch-issue"><span class="trigger-label">Stop Watching</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/ManageWatchers!default.jspa?id=21659" class="aui-list-item-link issueaction-manage-watchers" title="Manage the watchers of this issue" id="manage-watchers"><span class="trigger-label">Watchers</span></a></li></ul><ul class="aui-list-section"><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/CreateSubTaskIssue!default.jspa?parentIssueId=21659" class="aui-list-item-link issueaction-create-subtask" title="Create sub-task for this issue" id="create-subtask"><span class="trigger-label">Create Sub-Task</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/ConvertIssue.jspa?id=21659" class="aui-list-item-link issueaction-issue-to-subtask" title="Convert this issue to sub-task" id="issue-to-subtask"><span class="trigger-label">Convert to Sub-Task</span></a></li></ul><ul class="aui-list-section"><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/MoveIssue!default.jspa?id=21659" class="aui-list-item-link issueaction-move-issue" title="Move this issue to another project or issue type." id="move-issue"><span class="trigger-label">Move</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/LinkJiraIssue!default.jspa?id=21659" class="aui-list-item-link issueaction-link-issue" title="Link this issue to another issue or item" id="link-issue"><span class="trigger-label">Link</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/CloneIssueDetails!default.jspa?id=21659" class="aui-list-item-link issueaction-clone-issue" title="Clone this issue" id="clone-issue"><span class="trigger-label">Clone</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/EditLabels!default.jspa?id=21659" class="aui-list-item-link issueaction-edit-labels" title=" ( Type &#39;l&#39; )" id="edit-labels"><span class="trigger-label">Labels</span></a></li></ul><ul class="aui-list-section aui-last"><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/DeleteIssue!default.jspa?id=21659" class="aui-list-item-link issueaction-delete-issue" title="Delete this issue" id="delete-issue"><span class="trigger-label">Delete</span></a></li></ul></div></div></li></ul><ul id="opsbar-opsbar-transitions" class="toolbar-group pluggable-ops"><li class="toolbar-item"><a id="action_id_151" class="toolbar-trigger issueaction-workflow-transition" href="https://getitllc.atlassian.net/secure/WorkflowUIDispatcher.jspa?id=21659&action=151&atl_token=BEGF-0SBL-Y7RL-G9EE|74e9d65b2e67275f65ee155f3b65bce4fc867a23|lin"><span class="trigger-label">Remove from Workflow</span></a></li><li class="toolbar-item"><a id="action_id_91" class="toolbar-trigger issueaction-workflow-transition" href="https://getitllc.atlassian.net/secure/WorkflowUIDispatcher.jspa?id=21659&action=91&atl_token=BEGF-0SBL-Y7RL-G9EE|74e9d65b2e67275f65ee155f3b65bce4fc867a23|lin"><span class="trigger-label">Ready for Final Docume...</span></a></li><li class="toolbar-item"><a id="action_id_261" title="Back To Development - Send Back To Development" class="toolbar-trigger issueaction-workflow-transition" href="https://getitllc.atlassian.net/secure/WorkflowUIDispatcher.jspa?id=21659&action=261&atl_token=BEGF-0SBL-Y7RL-G9EE|74e9d65b2e67275f65ee155f3b65bce4fc867a23|lin"><span class="trigger-label">Back To Development</span></a></li></ul><ul id="opsbar-opsbar-admin" class="toolbar-group pluggable-ops"><li class="toolbar-item toolbar-dropdown"><div><a href="https://getitllc.atlassian.net/browse/SMSK-774#" id="opsbar-admin_more" data-hide-on-scroll=".split-view .issue-container" data-contain-to-window="true" class="toolbar-trigger  js-default-dropdown"><span class="dropdown-text">Admin</span><span class="icon drop-menu"></span></a><div class="aui-list hidden"><ul class="aui-list-section aui-first"><li class="aui-list-item"><a href="https://getitllc.atlassian.net/secure/admin/ViewCustomFields.jspa" class="aui-list-item-link issueaction-fields-add" title="Add a field and to the current issue&#39;s screens." id="com.atlassian.jira.jira-project-config-plugin:add-custom-field"><span class="trigger-label">Add field</span></a></li></ul><ul class="aui-list-section aui-last"><li class="aui-list-item"><a href="https://getitllc.atlassian.net/notimportant" class="aui-list-item-link whereismycf-trigger" title="Where is my field?" id="jira-operations-whereismycf-trigger"><span class="trigger-label">Where is my field?</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/notimportant" class="aui-list-item-link permissionhelper-trigger" title="Discover why a user does or does not have certain permissions" id="jira-operations-permissionhelper-trigger"><span class="trigger-label">Permission Helper</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/notimportant" class="aui-list-item-link notificationhelper-trigger" title="Find out why users receive, or do not receive notifications for this issue" id="jira-operations-notificationhelper-trigger"><span class="trigger-label">Notification Helper</span></a></li></ul></div></div></li></ul></div><div class="toolbar-split toolbar-split-right"><ul id="opsbar-jira.issue.tools" class="toolbar-group pluggable-ops"><li class="toolbar-item"><a id="jira-share-trigger" class="toolbar-trigger icon-share viewissue-share" href="https://getitllc.atlassian.net/browse/SMSK-774#" original-title="Share this issue by emailing other users"><span class="icon icon-share icon-viewissue-share"></span> <span class="trigger-label"></span></a></li><li class="toolbar-item toolbar-dropdown"><div><a href="https://getitllc.atlassian.net/browse/SMSK-774#" id="viewissue-export" data-hide-on-scroll=".split-view .issue-container" data-contain-to-window="true" class="toolbar-trigger  js-default-dropdown" original-title="Export this issue in another format"><span class="icon icon-export viewissue-export"></span> <span class="dropdown-text">Export</span><span class="icon drop-menu"></span></a><div class="aui-list hidden"><ul class="aui-list-section aui-first aui-last"><li class="aui-list-item"><a href="https://getitllc.atlassian.net/si/jira.issueviews:issue-xml/SMSK-774/SMSK-774.xml" class="aui-list-item-link" id="jira.issueviews:issue-xml"><span class="trigger-label">XML</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/si/jira.issueviews:issue-word/SMSK-774/SMSK-774.doc" class="aui-list-item-link" id="jira.issueviews:issue-word"><span class="trigger-label">Word</span></a></li><li class="aui-list-item"><a href="https://getitllc.atlassian.net/si/jira.issueviews:issue-html/SMSK-774/SMSK-774.html" class="aui-list-item-link" id="jira.issueviews:issue-html"><span class="trigger-label">Printable</span></a></li></ul></div></div></li></ul></div></div></div></div></div>
+                    </header>
+                    <div class="issue-body-content">
+                        <div class="aui-group issue-body"><div class="aui-item issue-main-column"><div id="details-module" class="module toggle-wrap"><div id="details-module_heading" class="mod-header"><ul class="ops"></ul><h2 class="toggle-title">Details</h2></div><div class="mod-content">
+
+
+
+
+<ul id="issuedetails" class="property-list two-cols">
+    <li class="item">
+        <div class="wrap">
+            <strong class="name">Type:</strong>
+            <span id="type-val" class="value editable-field inactive" title="Click to edit">
+                                <img alt="Story" height="16" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/story.png" title="Story" width="16"> Story
+            <span class="overlay-icon aui-icon aui-icon-small aui-iconfont-edit"></span></span>
+        </div>
+    </li>
+    <li class="item item-right">
+        <div class="wrap">
+            <strong class="name">Status:</strong>
+            <span id="status-val" class="value">
+                                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-yellow jira-issue-status-lozenge-indeterminate jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Test&lt;/span&gt;">Test</span>            </span>
+                    </div>
+    </li>
+            <li class="item">
+            <div class="wrap">
+                <strong class="name">Priority:</strong>
+                <span id="priority-val" class="value editable-field inactive" title="Click to edit">
+                                        <img alt="Major" height="16" src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/major.png" title="Major - Major loss of function." width="16"> Major
+                <span class="overlay-icon aui-icon aui-icon-small aui-iconfont-edit"></span></span>
+            </div>
+        </li>
+                                <li class="item item-right">
+            <div class="wrap">
+                <strong class="name">Resolution:</strong>
+                <span id="resolution-val" class="value unresolved">
+                                    Unresolved
+                                </span>
+            </div>
+        </li>
+                <li class="item">
+            <div class="wrap">
+                <strong class="name">Affects Version/s:</strong>
+                <span id="versions-val" class="value editable-field inactive" title="Click to edit">
+                                            None
+                                    <span class="overlay-icon aui-icon aui-icon-small aui-iconfont-edit"></span></span>
+            </div>
+        </li>
+                <li class="item item-right">
+            <div class="wrap">
+                <strong class="name">Fix Version/s:</strong>
+                <span id="fixfor-val" class="value editable-field inactive" title="Click to edit">
+                                            None
+                                    <span class="overlay-icon aui-icon aui-icon-small aui-iconfont-edit"></span></span>
+            </div>
+        </li>
+                        <li class="item full-width">
+            <div class="wrap" id="wrap-labels">
+                <strong class="name">Labels:</strong>
+                    <div class="labels-wrap value editable-field inactive" title="Click to edit">
+            <span class="labels" id="labels-21659-value">None</span>
+                                <a class="icon jira-icon-edit edit-labels" id="edit-labels-21659-labels" href="https://getitllc.atlassian.net/secure/EditLabels!default.jspa?id=21659&noLink=false" title="Follow link"><span>Labels</span></a>
+                <span class="overlay-icon aui-icon aui-icon-small aui-iconfont-edit"></span></div>
+            </div>
+        </li>
+        </ul>
+
+<div id="customfieldmodule">
+    <div class="aui-tabs horizontal-tabs" id="customfield-tabs" role="application">
+                    <div id="customfield-panel-1" class="tabs-pane active-pane" role="tabpanel" aria-hidden="false">
+                        <ul class="property-list">
+                                                <li id="rowForcustomfield_10610" class="item">
+                        <div class="wrap">
+                            <strong title="Expedited" class="name">Expedited:</strong>
+                            <div id="customfield_10610-val" class="value type-select editable-field inactive" data-fieldtype="select" data-fieldtypecompletekey="com.atlassian.jira.plugin.system.customfieldtypes:select" title="Click to edit">
+                                    No
+
+                            <span class="overlay-icon aui-icon aui-icon-small aui-iconfont-edit"></span></div>
+                        </div>
+                    </li>
+                                                                <li id="rowForcustomfield_10312" class="item">
+                        <div class="wrap">
+                            <strong title="Rank (Obsolete)" class="name">Rank (Obsolete):</strong>
+                            <div id="customfield_10312-val" class="value type-gh-global-rank" data-fieldtype="gh-global-rank" data-fieldtypecompletekey="com.pyxis.greenhopper.jira:gh-global-rank">
+                                      9223372036854775807
+  
+                            </div>
+                        </div>
+                    </li>
+                                        </ul>
+        </div>
+        </div></div>
+</div></div><div id="descriptionmodule" class="module toggle-wrap"><div id="descriptionmodule_heading" class="mod-header"><ul class="ops"></ul><h2 class="toggle-title">Description</h2></div><div class="mod-content"><div id="description-val" class="field-ignore-highlight editable-field inactive" title="Click to edit">
+    <div class="user-content-block">
+                    <p>As a developer I think we should change the elasticsearch classes in SMS to use index names that are setup in the application.php file. This will let us create multiple  indexes on the jenkins machine so we can run multiple tests at once and also run the staging site. </p>
+            </div>
+<span class="overlay-icon aui-icon aui-icon-small aui-iconfont-edit"></span></div>
+</div></div><div id="activitymodule" class="module toggle-wrap"><div id="activitymodule_heading" class="mod-header"><ul class="ops"></ul><h2 class="toggle-title">Activity</h2></div><div class="mod-content">
+
+
+
+
+
+
+
+
+
+
+    <div class="tabwrap tabs2">
+                <ul id="issue-tabs" class="tabs horizontal">
+                                
+            <li data-id="all-tabpanel" data-key="com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel" data-label="All" data-href="/browse/SMSK-774?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel">
+                            <a class="ajax-activity-content" id="all-tabpanel" href="https://getitllc.atlassian.net/browse/SMSK-774?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel"><strong>All</strong></a>
+                        </li>
+                                
+            <li class="active" id="comment-tabpanel" data-id="comment-tabpanel" data-key="com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel" data-label="Comments" data-href="/browse/SMSK-774?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel">
+                            <strong>Comments</strong>
+                        </li>
+                                
+            <li data-id="worklog-tabpanel" data-key="com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel" data-label="Work Log" data-href="/browse/SMSK-774?page=com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel">
+                            <a class="ajax-activity-content" id="worklog-tabpanel" href="https://getitllc.atlassian.net/browse/SMSK-774?page=com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel"><strong>Work Log</strong></a>
+                        </li>
+                                
+            <li data-id="changehistory-tabpanel" data-key="com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel" data-label="History" data-href="/browse/SMSK-774?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel">
+                            <a class="ajax-activity-content" id="changehistory-tabpanel" href="https://getitllc.atlassian.net/browse/SMSK-774?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel"><strong>History</strong></a>
+                        </li>
+                                
+            <li data-id="activity-stream-issue-tab" data-key="com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab" data-label="Activity" data-href="/browse/SMSK-774?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab">
+                            <a class="ajax-activity-content" id="activity-stream-issue-tab" href="https://getitllc.atlassian.net/browse/SMSK-774?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab"><strong>Activity</strong></a>
+                        </li>
+                </ul>
+    </div>
+    <div class="issuePanelWrapper">
+        <div class="issuePanelProgress"></div>
+        <div class="issuePanelContainer" id="issue_actions_container">
+                                    <div class="message-container">
+    There are no comments yet on this issue.
+</div>                             </div>
+    </div>
+</div></div><div id="addcomment" class="module active">
+    <div id="addcomment" class="module">
+    <div class="mod-content">
+        
+    <form action="https://getitllc.atlassian.net/secure/AddComment.jspa?atl_token=BEGF-0SBL-Y7RL-G9EE%7C74e9d65b2e67275f65ee155f3b65bce4fc867a23%7Clin" class="aui top-label ajs-dirty-warning-exempt" id="issue-comment-add" method="post">
+            <div class="form-body">
+                <div class="hidden">
+                    <input name="atl_token" type="hidden" value="BEGF-0SBL-Y7RL-G9EE|74e9d65b2e67275f65ee155f3b65bce4fc867a23|lin">
+                    <input name="id" type="hidden" value="21659">
+                </div>
+
+                
+
+
+    
+            
+                
+    
+    
+                            <div class="field-group aui-field-wikiedit comment-input">
+                                                                        <label for="comment">Comment</label>
+                
+<div class="wiki-edit">
+    <div id="comment-wiki-edit" class="wiki-edit-content">
+                                 <textarea class="textarea long-field wiki-textfield mentionable" cols="60" id="comment" name="comment" rows="10" wrap="virtual" data-projectkey="SMSK" data-issuekey="SMSK-774" style="overflow-y: auto; height: 200px;"></textarea>
+                <div class="content-inner">            
+        </div>
+    </div>
+</div>
+<div class="field-tools">
+    
+    <a class="fullscreen" href="https://getitllc.atlassian.net/browse/SMSK-774#" id="comment-preview_link" title="preview"><span class="aui-icon wiki-renderer-icon"></span></a>
+    <a class="help-lnk" id="viewHelp" href="https://getitllc.atlassian.net/secure/WikiRendererHelpAction.jspa?section=texteffects" title="Get local help about wiki markup help" data-helplink="local"><span class="aui-icon aui-icon-small aui-iconfont-help"></span></a>
+</div>
+
+                                                                                        <div class="security-level">
+        <fieldset class="hidden parameters">
+            <input type="hidden" title="securityLevelViewableByAll" value="Viewable by All Users">
+            <input type="hidden" title="securityLevelViewableRestrictedTo" value="Restricted to &lt;span class=&#39;redText&#39;&gt;{0}&lt;/span&gt;">
+        </fieldset>
+        
+        <div class="select-menu" id="commentLevel-multi-select"><a class="drop" href="https://getitllc.atlassian.net/browse/SMSK-774#"><span class="icon  icon-unlocked"></span><span class="icon drop-menu"></span></a><div class="aui-list aui-list-checked" id="commentLevel-suggestions" tabindex="-1"></div></div><div class="select-menu" id="commentLevel-multi-select"><div class="aui-list aui-list-checked" id="commentLevel-suggestions" tabindex="-1"></div></div><select name="commentLevel" id="commentLevel" multiple="multiple" style="display: none;">
+            <option value="">All Users</option>
+                            <optgroup label="Project Roles">
+                                            <option value="role:10002">Administrators</option>
+                                             <option value="role:10001">Developers</option>
+                                             <option value="role:10000">Users</option>
+                                     </optgroup>
+                                </select>
+        <span class="current-level">Viewable by All Users</span>
+    </div>
+                                    </div>
+    
+            </div>
+            <div class="buttons-container form-footer">
+                <div class="buttons">
+                    <input accesskey="s" class="aui-button" id="issue-comment-add-submit" name="Add" title="Press Ctrl+Alt+s to submit this form" type="submit" value="Add">
+                    <a accesskey="`" class="aui-button aui-button-link cancel" href="https://getitllc.atlassian.net/browse/SMSK-774#" id="issue-comment-add-cancel" title="Press Ctrl+Alt+` to cancel">Cancel</a>
+                </div>
+            </div>
+        </form></div>
+    <div class="mod-footer">
+        <ul class="ops">
+            <li>
+                <a href="https://getitllc.atlassian.net/secure/AddComment!default.jspa?id=21659" id="footer-comment-button" name="add-comment" class="aui-button">
+                    <span class="aui-icon aui-icon-small aui-iconfont-comment icon-comment"></span>
+                    <span>Comment</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</div>
+</div><div id="viewissuesidebar" class="aui-item issue-side-column"><div id="peoplemodule" class="module toggle-wrap"><div id="peoplemodule_heading" class="mod-header"><ul class="ops"></ul><h2 class="toggle-title">People</h2></div><div class="mod-content"><ul class="item-details" id="peopledetails">
+    <li class="people-details">
+                <dl>
+            <dt>Assignee:</dt>
+            <dd>
+                <span id="assignee-val" class="view-issue-field editable-field inactive" title="Click to edit">
+
+            <span class="user-hover" id="issue_summary_assignee_will" rel="will">
+            <span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/useravatar"></span></span>
+            Will Hogben
+        </span>
+    <span class="overlay-icon aui-icon aui-icon-small aui-iconfont-edit"></span></span>
+                            </dd>
+        </dl>
+                        <dl>
+            <dt>Reporter:</dt>
+            <dd>
+                <span id="reporter-val" class="view-issue-field editable-field inactive" title="Click to edit">
+
+            <span class="user-hover" id="issue_summary_reporter_will" rel="will">
+            <span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="./[SMSK-774] Change SMS Elasticsearch Setup to use configured index names - GetIt Corporate JIRA_files/useravatar"></span></span>
+            Will Hogben
+        </span>
+    <span class="overlay-icon aui-icon aui-icon-small aui-iconfont-edit"></span></span>
+            </dd>
+        </dl>
+                    </li>
+</ul>
+    <ul class="item-details">
+        <li>
+                            <dl>
+                    <dt>Votes:</dt>
+                    <dd>
+                                                                            <a id="view-voter-list" href="https://getitllc.atlassian.net/secure/ViewVoters!default.jspa?id=21659" title="View Voters">
+                                                    <span id="vote-data" class="aui-badge vote-state-off">0</span>
+                                                    </a>
+                        
+                                                                    </dd>
+                </dl>
+                                        <dl>
+                    <dt>Watchers:</dt>
+                    <dd>
+                                                                        
+                                                                            <a id="view-watcher-list" href="https://getitllc.atlassian.net/secure/ManageWatchers!default.jspa?id=21659" title="View Watchers">
+                                                    <span id="watcher-data" class="aui-badge watch-state-on">1</span>
+                                                    </a>
+                        
+                                                                                    <a id="watching-toggle" class="watch-state-on" href="https://getitllc.atlassian.net/secure/VoteOrWatchIssue.jspa?atl_token=BEGF-0SBL-Y7RL-G9EE|74e9d65b2e67275f65ee155f3b65bce4fc867a23|lin&id=21659&watch=unwatch" rel="21659">Stop watching this issue</a> <span class="icon"></span>
+                                                                        </dd>
+                </dl>
+                    </li>
+    </ul>
+</div></div><div id="datesmodule" class="module toggle-wrap"><div id="datesmodule_heading" class="mod-header"><ul class="ops"></ul><h2 class="toggle-title">Dates</h2></div><div class="mod-content"><ul class="item-details">
+    <li>
+            <dl class="dates">
+            <dt>Created:</dt>
+            <dd class="date user-tz" title="18/Jul/14 2:46 PM">
+
+                <span data-name="Created" id="create-date" data-fieldtype="datetime">
+                                                                        <time class="livestamp" datetime="2014-07-18T14:46:28-0400">2 days ago</time>                                                             </span>
+            </dd>
+        </dl>
+            <dl class="dates">
+            <dt>Updated:</dt>
+            <dd class="date user-tz" title="21/Jul/14 11:56 AM">
+
+                <span data-name="Updated" id="updated-date" data-fieldtype="datetime">
+                                                                        <time class="livestamp" datetime="2014-07-21T11:56:03-0400">2 hours ago</time>                                                             </span>
+            </dd>
+        </dl>
+        </li>
+</ul>
+</div></div><div id="greenhopper-agile-issue-web-panel" class="module toggle-wrap"><div id="greenhopper-agile-issue-web-panel_heading" class="mod-header"><ul class="ops"></ul><h2 class="toggle-title">Agile</h2></div><div class="mod-content">
+
+<ul class="item-details ghx-separated">
+    <li>
+        <a class="issueaction-greenhopper-rapidboard-operation js-rapidboard-operation-issue" href="https://getitllc.atlassian.net/secure/GHGoToBoard.jspa?issueId=21659&inline=true" title="View this issue on an Agile board">
+            View on Board
+        </a>
+    </li>
+</ul>
+</div></div><div id="bamboo-deployment-projects-right" class="module toggle-wrap" style="display: none;"><div id="bamboo-deployment-projects-right_heading" class="mod-header"><ul class="ops"></ul><h2 class="toggle-title">Issue deployment</h2></div><div class="mod-content"><div id="issue-deployments-panel-content"></div>
+<script>
+    (function ($, JBAM_DEPLOYMENT){
+        if (!JBAM_DEPLOYMENT) {
+            return; // Don't bother rendering, since the resources aren't loaded (yet?).
+        }
+        if (JBAM_DEPLOYMENT.panel) {
+            JBAM_DEPLOYMENT.panel.remove();
+        }
+        JBAM_DEPLOYMENT.panel =  new JBAM_DEPLOYMENT.RelatedDeploymentProjects.View({
+                                                                                    el: '#issue-deployments-panel-content',
+                                                                                    fetchUrl: '/rest/bamboo/latest/deploy/SMSK/SMSK-774',
+                                                                                    oAuthDanceReturnUrl: '/browse/SMSK-774',
+                                                                                    issueId: '21659'
+                                                                                });
+    }(AJS.$, window.JBAM_DEPLOYMENT));
+</script>
+</div></div></div></div>
+                    </div>
+                </div>
+                        </div>
+
+    <fieldset class="hidden parameters">
+        <input type="hidden" title="autocompleteEnabled" value="true">
+    </fieldset>
+    
+    </section>
+    <footer id="footer" role="contentinfo">
+        
+        
+
+<section class="footer-body">
+        <ul class="atlassian-footer">
+            <li><a href="http://www.atlassian.com/">Powered by Atlassian</a><span id="studioVersion" class="hidden">2.0 r</span></li>
+            <li><a href="http://www.atlassian.com/hosted/terms.jsp">Terms of Use</a></li>
+            <li><a href="https://answers.atlassian.com/">Answers</a></li>
+            <li><a href="https://confluence.atlassian.com/x/aJALE">Maintenance Schedule</a></li>
+        <li class="jira-feedback-link-container footer-style"><a class="aui-button jira-feedback-link ">Got Feedback?</a></li></ul>
+
+
+<script type="text/javascript">
+    // This is the app specific data that the shared js expects
+    studioData = {"jiraUrl" : "https://getitllc.atlassian.net"};
+
+        
+    // Google analytics
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-6032469-30']);
+    _gaq.push(['_setDetectTitle', false]); // don't send page titles
+
+    (function () {
+        var filteredUrl = document.location.pathname + document.location.search;
+        // don't capture page titles in CONF
+        filteredUrl = filteredUrl.replace(/(.*)\/display\/.*\/.*/,
+                '$1/pages/viewpage.action?pageId=' + (AJS && AJS.Meta && AJS.Meta.get('page-id') || "*"));
+        _gaq.push(['_trackPageview', filteredUrl]);
+    })();
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<form id="jira_request_timing_info" class="dont-default-focus">
+	<fieldset class="parameters hidden">
+		<input type="hidden" title="jira.request.start.millis" value="1405963761277">
+		<input type="hidden" title="jira.request.server.time" value="1143">
+		<input type="hidden" title="jira.request.id" value="809x1762x1">
+		<input type="hidden" title="jira.session.expiry.time" value="1405981761277">
+		<input type="hidden" title="jira.session.expiry.in.mins" value="299">
+		<input id="jiraConcurrentRequests" type="hidden" name="jira.request.concurrent.requests" value="1">
+	</fieldset>
+</form>
+<!--
+	                 REQUEST ID : 809x1762x1
+	          REQUEST TIMESTAMP : [21/Jul/2014:13:29:21 -0400]
+	               REQUEST TIME : 1.1430
+	                 ASESSIONID : 1mgvggq
+	        CONCURRENT REQUESTS : 1
+
+	                      db.reads : name=db.reads; inv=200; ms=75; cpu=0; rss=0;
+	                      db.conns : name=db.conns; inv=213; ms=90; cpu=0; rss=0;
+	                     db.writes : name=db.writes; inv=2; ms=3; cpu=0; rss=0;
+-->
+    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+</section>
+
+
+
+
+
+
+
+
+
+<fieldset class="hidden parameters">
+    <input type="hidden" title="loggedInUser" value="will">
+    <input type="hidden" title="ajaxTimeout" value="The call to the JIRA server did not complete within the timeout period.  We are unsure of the result of this operation.">
+    <input type="hidden" title="JiraVersion" value="6.3-OD-08-005-WN">
+    <input type="hidden" title="ajaxUnauthorised" value="You are not authorized to perform this operation.  Please log in.">
+    <input type="hidden" title="baseURL" value="https://getitllc.atlassian.net:443">
+    <input type="hidden" title="ajaxCommsError" value="The JIRA server could not be contacted. This may be a temporary glitch or the server may be down.">
+    <input type="hidden" title="ajaxServerError" value="The JIRA server was contacted but has returned an error response. We are unsure of the result of this operation.">
+    <input type="hidden" title="ajaxErrorCloseDialog" value="Close this dialog and press refresh in your browser">
+    <input type="hidden" title="ajaxErrorDialogHeading" value="Communications Breakdown">
+
+    <input type="hidden" title="dirtyMessage" value="You have entered new data on this page. If you navigate away from this page without first saving your data, the changes will be lost.">
+    <input type="hidden" title="dirtyDialogMessage" value="You have entered new data in this dialog. If you navigate away from this dialog without first saving your data, the changes will be lost. Click cancel to return to the dialog.">
+    <input type="hidden" title="keyType" value="Type">
+    <input type="hidden" title="keyThen" value="then">
+    <input type="hidden" title="dblClickToExpand" value="Double click to expand">
+    <input type="hidden" title="actions" value="Actions">
+    <input type="hidden" title="removeItem" value="Remove">
+    <input type="hidden" title="workflow" value="Workflow">
+    <input type="hidden" title="labelNew" value="New Label">
+    <input type="hidden" title="issueActionsHint" value="Begin typing for available operations or press down to see all">
+    <input type="hidden" title="closelink" value="Close">
+    <input type="hidden" title="dotOperations" value="Operations">
+    <input type="hidden" title="dotLoading" value="Loading...">
+    <input type="hidden" title="frotherSuggestions" value="Suggestions">
+    <input type="hidden" title="frotherNomatches" value="No Matches">
+    <input type="hidden" title="multiselectVersionsError" value="{0} is not a valid version.">
+    <input type="hidden" title="multiselectComponentsError" value="{0} is not a valid component.">
+    <input type="hidden" title="multiselectGenericError" value="The value {0} is invalid.">
+</fieldset>
+
+    </footer>
+</div>
+
+
+<a class="tempo-planning-create-team"></a><div id="tempo-blanket" style="z-index: 2000; height: 100%; display: none;"></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="tempo-bar" style="display: none;"><div id="tempo-tracker-slider-id"></div><a title="View timesheets and log work" href="https://getitllc.atlassian.net/secure/TempoUserBoard!timesheet.jspa" class="tempo-bar-logo">TEMPO</a><span id="tempo-tracker-clock-id" class="clock hide-clock"></span><a id="tempo-bar-close" href="https://getitllc.atlassian.net/secure/TempoTrackerConfirmation!default.jspa?returnUrl=https://getitllc.atlassian.net/browse/SMSK-774" class="tempoaction-open-dialog-form aui-button aui-button-subtle" title="Close Tracker">Close Tracker</a><ul id="tempo-tracker-actions" class="action-buttons ops aui-buttons"><a href="https://getitllc.atlassian.net/browse/SMSK-774#" class="tracker-button button aui-button aui-button-subtle play first last" title="Start Tracker"><span class="icon"></span><span class="label">Start</span></a><a href="https://getitllc.atlassian.net/browse/SMSK-774#" class="tracker-button button aui-button aui-button-subtle pause first" title="Pause Tracker" style="display: none;"><span class="icon"></span><span class="label"></span></a><a href="https://getitllc.atlassian.net/browse/SMSK-774#" class="tracker-button button aui-button aui-button-subtle stop issueaction-tempo-add-hours-on-issue last" title="Stop Tracker" style="display: none;"><span class="icon"></span><span class="label"></span></a></ul><span class="issue" style="display: none;"><span class="image"><a><img width="16" height="16" border="0" align="absmiddle"></a></span><span class="key"><a></a></span><span id="issue-tracker-summary-id" class="summary hidden-actions"><a></a></span></span></div><div id="edit-issue-dialog" class="jira-dialog box-shadow" style="display: none;"><div class="jira-dialog-content"></div></div></body></html>
